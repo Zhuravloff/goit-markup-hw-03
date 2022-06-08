@@ -9,7 +9,6 @@
 }
 
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -68,12 +67,14 @@ img {
 }
 
 /* logo */
+
 .logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   color: var(--accent-color);
+  margin-right: 93px;
 }
 
 .header-logo-text {
@@ -110,7 +111,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
   outline: 1px solid red;
 }
 
@@ -119,12 +119,17 @@ img {
   padding-bottom: 94px;
 }
 
+.card-set {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 /*Msin nav*/
 
 .main-nav {
   display: flex;
   align-items: center;
-  margin-bottom: 4px;
 }
 
 /* Site nav */
@@ -143,12 +148,11 @@ img {
 
 .site-nav {
   display: flex;
-  margin-left: 92px;
 }
 
 .site-nav .item {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav .item:not(:last-child) {
@@ -158,6 +162,8 @@ img {
 .contact-nav {
   display: flex;
   margin-left: auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--secondary-text-color);
 }
@@ -180,10 +186,11 @@ img {
 .hero {
   background-color: var(--first-background-color);
   text-align: center;
+  padding-top: 204px;
+  padding-bottom: 276px;
 }
 .hero-title {
   width: 696px;
-  padding-top: 204px;
 
   margin-left: auto;
   margin-right: auto;
@@ -201,10 +208,10 @@ img {
 .hero .button {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 196px;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 200px;
+
+  padding: 10px 32px;
+  min-width: 200px;
+  border-radius: 4px;
 
   color: var(--button-text-color);
   background-color: var(--accent-color);
@@ -217,13 +224,10 @@ img {
 
 .feature-list {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  flex-basis: calc((100% - 90px) / 4);
 }
 
-.feature-list .item + .item {
-  margin-left: 30px;
+.feature-list .item {
+  flex-basis: calc((100% - 90px) / 4);
 }
 
 .feature-list .title {
@@ -241,6 +245,10 @@ img {
 }
 /* about */
 
+.about {
+  padding-top: 0;
+}
+
 .section-title {
   margin-bottom: 50px;
   font-weight: 700;
@@ -257,15 +265,15 @@ img {
 }
 
 .about-img {
-  /* flex-basis: calc(100% / 3 - 30px); */
-
-  margin-right: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 }
+
 .about-img:nth-child(3n) {
   margin-right: 0;
 }
 
 /* Our-team */
+
 .team {
   background-color: var(--secondary-background-color);
   text-align: center;
@@ -273,11 +281,19 @@ img {
 
 .team-list {
   display: flex;
-  justify-content: space-around;
+}
+
+.team-box {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-card {
+  padding: 30px;
 }
 
 .team-list .img {
-  margin-bottom: 30px;
   border-bottom: #2196f3;
 }
 
@@ -294,10 +310,10 @@ img {
 
 .team-text {
   color: var(--secondary-text-color);
-  margin-bottom: 30px;
 }
 
 /* Basement */
+
 .basement {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -323,30 +339,24 @@ img {
   color: var(--button-text-color);
 }
 
-.basement-logo {
+.basement .logo {
   display: inline-block;
 
   margin-bottom: 20px;
 }
 
-.basement-item {
+.basement-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.basement-item:only-child {
-  margin-bottom: 0;
-}
-
 /* Portfolio */
-.filter {
-  margin-bottom: 64px;
-}
 
 .portfolio-btn {
   display: flex;
   flex-direction: row;
 
   justify-content: center;
+  margin-bottom: 64px;
 }
 
 .portfolio-filter:hover,
@@ -355,11 +365,16 @@ img {
   background-color: var(--accent-color);
 }
 
+.portfolio-li {
+  margin-right: 8px;
+}
+
 .portfolio-filter {
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  margin-right: 8px;
+  padding: 6px 22px;
+
   background-color: var(--secondary-background-color);
 }
 
@@ -386,13 +401,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-right: auto;
-  margin-right: -30px;
-  margin-bottom: -30px;
 }
 .portfolio-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc((100% - 60px) / 3);
   margin-left: 0;
 }
 
